@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Store</title>
+
+    <!-- =====  BOX ICONS  ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- font awesome csn file link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <!-- =====  FOUNDATION  ===== -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+
+    <!-- =====  CSS  ===== -->
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+    <!-- ===== APP START ===== -->
+    <div id="app">
+        <nav id='css'>
+            <ul>
+                <!-- <li class="become member"> <i class='bx bx-log-in'></i> Log in</li>
+                <li class="become member">Sign up</li>
+                <li><i class='bx bxl-twitter'></i></li>
+                <li><i class='bx bxl-linkedin'></i></li> -->
+                <li>
+                    <button type="button" class="btn m-0 p-0 ">
+                        <span class="badge bg-primary">{{count}}</span>
+                    </button>
+                    <i @click="ShowModal()" type="button" class="btn bx bxs-cart position-relative">
+                    </i>
+                </li>
+                <!-- <li><i class='bx bxl-instagram'></i></li>
+                <li><i class='bx bxl-facebook-square'></i></li> -->
+            </ul>
+        </nav>
+        <div class="header">
+            <h2>Free ecommerce template for Vue.js project</h2>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, explicabo.</h3>
+        </div>
+        <div class="a d-flex">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="/image/oldcamera.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <div class="sm">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <p></p>
+                    </div>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <div class="stars">
+                    </div>
+                    <a href="#" class="btn btn-primary" @click="plus">Add</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="/image/watch.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <div class="sm">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <p></p>
+                    </div>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary" @click="plus">Add</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="/image/headphone.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <div class="sm">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <p class="info">
+                        </p>
+                    </div>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <button href="#" class="btn btn-primary" @click="plus">Add</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal" v-show="showModal">
+
+            <!-- ===== Modal content ===== -->
+            <div class="modal-content">
+
+                <div>
+                    <i class='bx bx-x-circle' v-if="showAlert"></i>
+                    <div class="alert alert-warning display-6" role="alert" v-if="showAlert">
+                        your total is over 2000
+                    </div>
+                    <div class="nav-link display-6 text-black m-5">{{total}}</d>
+                        <button @click.stop="minus" class="btn bg-danger text-light">Minus</button>
+                        <button @click="showModal = !showModal" class="btn bg-info text-light">Cancel</button>
+                    </div>
+
+                </div>
+                <!-- ===== THE MODAL CONTENT END ===== -->
+
+            </div>
+            <!-- ===== The Modal END ===== -->
+
+
+        </div>
+        <!-- ===== APP END ===== -->
+
+        <!-- =====  VUE  ===== -->
+        <script src="vue.global.js"></script>
+
+        <!-- =====  JS  ===== -->
+        <script src="/script.js"></script>
+
+</body>
+
+</html>
